@@ -31,8 +31,8 @@ def add_source(name, source_url, section):
         # Write out deb line only if it already doesn't exist
         f.seek(0)
         if line not in f.read():
-            f.write(line)
-            f.truncate()
+           # f.write(line)
+           # f.truncate()
             utils.run_subprocess(['apt-get', 'update', '--yes'])
 
 
