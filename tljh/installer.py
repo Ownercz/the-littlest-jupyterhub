@@ -100,7 +100,7 @@ sckuXINIU3DFWzZGr0QrqkuE/jyr7FXeUJj9B7cLo+s/TXo+RaVfi3kOc9BoxIvy
 -----END PGP PUBLIC KEY BLOCK-----
     """.strip()
     apt.trust_gpg_key(key)
-    apt.add_source('nodesource', 'https://deb.nodesource.com/node_10.x', 'main')
+    apt.add_source('nodesource', 'http://repo/mirror/nodejs10-bionic', 'main')
     apt.install_packages(['nodejs'])
 
 def remove_chp():
